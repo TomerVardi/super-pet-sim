@@ -9,7 +9,7 @@ public class GUI {
         JPanel panel = new JPanel();
         panel.setBackground(java.awt.Color.WHITE);
         frame.add(panel, BorderLayout.CENTER);
-        frame.setSize(400, 400);
+        frame.setSize(1920, 1080);
         frame.setVisible(true);
     }
 }
