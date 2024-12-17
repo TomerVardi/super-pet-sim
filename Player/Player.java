@@ -1,16 +1,16 @@
-Public Class Player{
+public Class Player{
   //name of the player
  private String name; 
  // constructor of the player
-  Public Player(String name){
+  public Player(String name){
     this.name=name;
 }
 // @return name 
-Public String getName(){
+public String getName(){
     return name;
   }
 // sets name
-  Public void setName(){
+  public void setName(String name){
     this.name = name;
 }
 }
