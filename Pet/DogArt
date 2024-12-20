@@ -30,9 +30,9 @@ public class DogArt {
     // Method to print new Beagle Dog art
     public static void printBeagleDog() {
         System.out.println("   __");
-        System.out.println(" o-''|\\_____/)");
-        System.out.println(" \\_/|_)     )");
-        System.out.println("    \\  __  /");
+        System.out.println(" o-''|\\_____/) ");
+        System.out.println(" \\_/|_)     ) ");
+        System.out.println("    \\  __  / ");
         System.out.println("    (_/ (_/    ");
     }
 
@@ -68,31 +68,44 @@ public class DogArt {
         System.out.println("         ~~~~~~~~  ~~~~~~~~       ~~~~~~~~  ~~~~~~~~");
     }
 
-    // Method to pick a random dog art and print it
-    public static void printRandomDogArt() {
+    // Method to print the Mountain Lion Cat art (CatOne)
+    public static void printCatOne() {
+        System.out.println("(`-''-/`).___..--''`-._ ");
+        System.out.println(" `6_ 6  )   `-.  (     ).`-.__.`) ");
+        System.out.println(" (_Y_.)'  ._   )  `._ `. ``-..-' ");
+        System.out.println("   _..`--'_..-_/  /--'_.'");
+        System.out.println("  ((((.-''  ((((.'  (((.-' ");
+    }
+
+    // Method to pick a random dog or cat art and print it
+    public static void printRandomDogOrCatArt() {
         Random rand = new Random();
-        int randomIndex = rand.nextInt(6); // Random number between 0 and 5
+        int randomIndex = rand.nextInt(7); // Random number between 0 and 6
 
         switch (randomIndex) {
             case 0:
-                printLabradorDog(); // This will print the new Labrador art
+                printLabradorDog(); // Print Labrador art
                 break;
             case 1:
-                printBulldogDog(); // This will print the Bulldog art
+                printBulldogDog(); // Print Bulldog art
                 break;
             case 2:
-                printPoodleDog(); // This will print the Poodle art
+                printPoodleDog(); // Print Poodle art
                 break;
             case 3:
-                printBeagleDog(); // This will print the Beagle art
+                printBeagleDog(); // Print Beagle art
                 break;
             case 4:
-                printGermanShepherdDog(); // This will print the new German Shepherd art
+                printGermanShepherdDog(); // Print German Shepherd art
                 break;
             case 5:
-                printCustomDogArt(); // This will print your provided custom dog art
+                printCustomDogArt(); // Print Custom Dog art
+                break;
+            case 6:
+                printCatOne(); // Print Mountain Lion Cat art
                 break;
         }
     }
-
 }
+
+
