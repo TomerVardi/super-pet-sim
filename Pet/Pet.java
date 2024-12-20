@@ -1,7 +1,7 @@
 import java.util.Scanner; // For input
 /**
-* Pet class creates a pet with attributes like name, type, age, hunger, and happiness.
-*/
+ * Pet class creates a pet with attributes like name, type, age, hunger, and happiness.
+ */
 public class Pet {
     // Name
     private String name;
@@ -10,24 +10,24 @@ public class Pet {
     // Age
     private final int age;
     // Hunger level from 0 (not hungry) to 10 (very hungry)
-    private int hungerLevel; 
+    private int hungerLevel;
     // Happiness level from 0 (unhappy) to 10 (very happy)
-    private int happiness;    
-    
+    private int happiness;
+
     public Pet(String name, boolean petType, int age) {
         this.name = name;
         this.petType = petType;
         this.age = age;
         // Default hunger level (neutral state)
-        this.hungerLevel = 5;   
+        this.hungerLevel = 5;
         // Default happiness level (neutral state)
-        this.happiness = 5;     
+        this.happiness = 5;
 
     }
 
     public void feed(int foodAmount) {
-    System.out.println(name + " is being fed!");
-    for (int i = 0; i < foodAmount; i++) {
+        System.out.println(name + " is being fed!");
+        for (int i = 0; i < foodAmount; i++) {
             // Each feeding decreases hunger level
             if (hungerLevel > 0) {
                 hungerLevel--;
@@ -36,10 +36,10 @@ public class Pet {
                 System.out.println(name + " is not hungry anymore.");
                 break;  // If hunger is satisfied, stop feeding
             }
-    }
-         // Increase happiness after feeding
-       happiness = Math.min(10, happiness + 1);  // Max happiness is 10
-       System.out.println(name + "'s happiness after feeding: " + happiness);
+        }
+        // Increase happiness after feeding
+        happiness = Math.min(10, happiness + 1);  // Max happiness is 10
+        System.out.println(name + "'s happiness after feeding: " + happiness);
     }
     // returns name
     public String getName() {
@@ -61,21 +61,28 @@ public class Pet {
     public int getAge() {
         return age;
     }
-    
+
     public int getHungerLevel() {
-       return hungerLevel;
-   }
+        return hungerLevel;
+    }
 
-   public void setHungerLevel(int hungerLevel) {
-       this.hungerLevel = hungerLevel;
-   }
+    public void setHungerLevel(int hungerLevel) {
+        this.hungerLevel = hungerLevel;
+    }
 
-   public int getHappiness() {
-       return happiness;
-   }
+    public int getHappiness() {
+        return happiness;
+    }
 
-   public void setHappiness(int happiness) {
-       this.happiness = happiness;
-   }
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
 
+    public void displayInfo() {
+        System.out.println("Pet name: " + name);
+        System.out.println("Pet type: " + petType);
+        System.out.println("Pet age: " + age);
+        System.out.println("Pet hunger level: " + hungerLevel);
+        System.out.println("Pet happiness: " + happiness);
+    }
 }
