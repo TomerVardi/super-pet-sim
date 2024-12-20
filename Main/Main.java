@@ -64,7 +64,8 @@ public class Main {
                 3. Play with your pet
                 4. Take your pet for a walk
                 5. View your pet and its details
-                6. Put your pet to sleep
+                6. What does your pet look like
+                7. Put your pet to sleep
             """);
 
             int choice = in.nextInt();
@@ -115,6 +116,11 @@ public class Main {
                     System.out.println("Hunger Level: " + pet.getHungerLevel());
                 }
                 case 6 -> {
+                    System.out.println("Here is what your pet looks like!");
+                    PetArt petArt = new PetArt();
+                    PetArt.printRandomDogOrCatArt();
+                }
+                case 7 -> {
                     System.out.println("Although your " + petType + ", " + pet.getName() + " wanted to spend more time with you, it understands that you are a busy individual and must attend to other matters.");
                     System.out.println("Are you sure you want to put your pet to sleep? (y/n)");
                     String answer = in.nextLine();
