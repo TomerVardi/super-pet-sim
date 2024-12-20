@@ -76,7 +76,12 @@ public class PetArt {
         System.out.println("   _..`--'_..-_/  /--'_.'");
         System.out.println("  ((((.-''  ((((.'  (((.-' ");
     }
-
+    // Method to print the Simple Cat art (CatTwo)
+    public static void printCatTwo() {
+        System.out.println("  /\\_/\\");
+        System.out.println(" ( o.o )");
+        System.out.println("  > ^ <");
+    }
     // Method to pick a random dog or cat art and print it
     public static void printRandomDogOrCatArt() {
         Random rand = new Random();
