@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class DogArt {
+public class PetArt {
 
     // Method to print new Labrador Dog art
     public static void printLabradorDog() {
