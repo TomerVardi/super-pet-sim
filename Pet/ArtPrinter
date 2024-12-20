@@ -1,10 +1,17 @@
 import java.util.Random;
 
+/**
+ * The ArtPrinter class provides methods to print ASCII art representations
+ * of various dog and cat breeds. It also allows for random selection of dog
+ * or cat art.
+ */
 public class ArtPrinter {
 
-    // Method to print new Labrador Dog art
+    /**
+     * Prints ASCII art for a Labrador Dog.
+     */
     public static void printLabradorDog() {
-        System.out.println("Here's your Labrador art!");
+        System.out.println("Here's your Labrador!");
         System.out.println("    ___");
         System.out.println(" __/_  `.  .-\"\"\"-.");
         System.out.println(" \\_,` | \\-'  /   )`-')");
@@ -13,26 +20,32 @@ public class ArtPrinter {
         System.out.println(" (_,___/...-` (_/_/");
     }
 
-    // Method to print new Bulldog Dog art
+    /**
+     * Prints ASCII art for a Bulldog Dog.
+     */
     public static void printBulldogDog() {
-        System.out.println("Here's your Bulldog art!");
+        System.out.println("Here's your Bulldog!");
         System.out.println("  (\\,--------'()'--o");
         System.out.println("   (_    ___    /~\"");
         System.out.println("    (_)_)  (_)_)");
     }
 
-    // Method to print the new Poodle Dog art
+    /**
+     * Prints ASCII art for a Poodle Dog.
+     */
     public static void printPoodleDog() {
-        System.out.println("Here's your Poodle art!");
+        System.out.println("Here's your Poodle!");
         System.out.println("  __      _");
         System.out.println(" o'')}____//");
         System.out.println("  `_/      )");
         System.out.println("  (_(_/-(_/");
     }
 
-    // Method to print new Beagle Dog art
+    /**
+     * Prints ASCII art for a Beagle Dog.
+     */
     public static void printBeagleDog() {
-        System.out.println("Here's your Beagle art!");
+        System.out.println("Here's your Beagle!");
         System.out.println("   __");
         System.out.println(" o-''|\\_____/) ");
         System.out.println(" \\_/|_)     ) ");
@@ -40,9 +53,11 @@ public class ArtPrinter {
         System.out.println("    (_/ (_/    ");
     }
 
-    // Method to print new German Shepherd Dog art
+    /**
+     * Prints ASCII art for a German Shepherd Dog.
+     */
     public static void printGermanShepherdDog() {
-        System.out.println("Here's your German Shepherd art!");
+        System.out.println("Here's your German Shepherd!");
         System.out.println("     |\\_/|                  ");
         System.out.println("     | @ @   Woof! ");
         System.out.println("     |   <>              _  ");
@@ -52,9 +67,11 @@ public class ArtPrinter {
         System.out.println("/_/_____/____/_______|");
     }
 
-    // Method to print the custom dog art you provided
+    /**
+     * Prints ASCII art for a custom dog design.
+     */
     public static void printCustomDogArt() {
-        System.out.println("Here's your Custom Dog art!");
+        System.out.println("Here's your Custom Dog!");
         System.out.println("");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("");
@@ -74,9 +91,11 @@ public class ArtPrinter {
         System.out.println("         ~~~~~~~~  ~~~~~~~~       ~~~~~~~~  ~~~~~~~~");
     }
 
-    // Method to print the Mountain Lion Cat art (CatOne)
+    /**
+     * Prints ASCII art for a Mountain Lion Cat.
+     */
     public static void printCatOne() {
-        System.out.println("Here's your Mountain Lion Cat art!");
+        System.out.println("Here's your Mountain Lion Cat!");
         System.out.println("(`-''-/`).___..--''`-._ ");
         System.out.println(" `6_ 6  )   `-.  (     ).`-.__.`) ");
         System.out.println(" (_Y_.)'  ._   )  `._ `. ``-..-' ");
@@ -84,15 +103,19 @@ public class ArtPrinter {
         System.out.println("  ((((.-''  ((((.'  (((.-' ");
     }
 
-    // Method to print the Simple Cat art (CatTwo)
+    /**
+     * Prints ASCII art for a Simple Cat.
+     */
     public static void printCatTwo() {
-        System.out.println("Here's your Simple Cat!");
+        System.out.println("Here's your Cat!");
         System.out.println("  /\\_/\\");
         System.out.println(" ( o.o )");
         System.out.println("  > ^ <");
     }
 
-    // Method to print the new Cat art (CatThree)
+    /**
+     * Prints ASCII art for an Energetic Cat.
+     */
     public static void printCatThree() {
         System.out.println("Here's your Energetic Cat!");
         System.out.println(" _._     _,-'\"\"`-._");
@@ -101,7 +124,9 @@ public class ArtPrinter {
         System.out.println("          `-    \\`_`\"'-");
     }
 
-    // Method to print the new Cat art (CatFour)
+    /**
+     * Prints ASCII art for a Lazy Cat.
+     */
     public static void printCatFour() {
         System.out.println("Here's your new Lazy Cat!");
         System.out.println("   |\\---/|");
@@ -112,62 +137,35 @@ public class ArtPrinter {
         System.out.println("  (_,...'(_,.`__)/'.....+");
     }
 
-    // Method to print a random dog art
+    /**
+     * Prints a random dog ASCII art by selecting from predefined dog designs.
+     */
     public static void printRandomDogArt() {
         Random rand = new Random();
         int randomIndex = rand.nextInt(6); // Random number between 0 and 5
 
         switch (randomIndex) {
-            case 0:
-                printLabradorDog();
-                break;
-            case 1:
-                printBulldogDog();
-                break;
-            case 2:
-                printPoodleDog();
-                break;
-            case 3:
-                printBeagleDog();
-                break;
-            case 4:
-                printGermanShepherdDog();
-                break;
-            case 5:
-                printCustomDogArt();
-                break;
+            case 0 -> printLabradorDog();
+            case 1 -> printBulldogDog();
+            case 2 -> printPoodleDog();
+            case 3 -> printBeagleDog();
+            case 4 -> printGermanShepherdDog();
+            case 5 -> printCustomDogArt();
         }
     }
 
-    // Method to print a random cat art
+    /**
+     * Prints a random cat ASCII art by selecting from predefined cat designs.
+     */
     public static void printRandomCatArt() {
         Random rand = new Random();
         int randomIndex = rand.nextInt(4); // Random number between 0 and 3
 
         switch (randomIndex) {
-            case 0:
-                printCatOne();
-                break;
-            case 1:
-                printCatTwo();
-                break;
-            case 2:
-                printCatThree();
-                break;
-            case 3:
-                printCatFour();
-                break;
+            case 0 -> printCatOne();
+            case 1 -> printCatTwo();
+            case 2 -> printCatThree();
+            case 3 -> printCatFour();
         }
-    }
-
-    // Main method to allow user to choose dog or cat
-    public static void main(String[] args) {
-        // Example: calling methods based on user input (you could replace this with actual input handling)
-        
-        System.out.println("Do you want a dog or a cat? Type 'dog' or 'cat'.");
-
-        // For example purposes, let's call one of the methods directly:
-        printRandomDogArt();  // Print random dog art
-        printRandomCatArt();  // Print random cat art
     }
 }
