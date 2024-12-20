@@ -1,3 +1,7 @@
+import java.util.Scanner; // For input
+/**
+* Pet class creates a pet with attributes like name, type, age, hunger, and happiness.
+*/
 public class Pet {
     // Name
     private String name;
@@ -33,6 +37,10 @@ public class Pet {
                 break;  // If hunger is satisfied, stop feeding
             }
     }
+         // Increase happiness after feeding
+       happiness = Math.min(10, happiness + 1);  // Max happiness is 10
+       System.out.println(name + "'s happiness after feeding: " + happiness);
+    }
     // returns name
     public String getName() {
         return name;
@@ -53,4 +61,21 @@ public class Pet {
     public int getAge() {
         return age;
     }
+    
+    public int getHungerLevel() {
+       return hungerLevel;
+   }
+
+   public void setHungerLevel(int hungerLevel) {
+       this.hungerLevel = hungerLevel;
+   }
+
+   public int getHappiness() {
+       return happiness;
+   }
+
+   public void setHappiness(int happiness) {
+       this.happiness = happiness;
+   }
+
 }
