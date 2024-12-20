@@ -1,0 +1,98 @@
+import java.util.Random;
+
+public class DogArt {
+
+    // Method to print new Labrador Dog art
+    public static void printLabradorDog() {
+        System.out.println("    ___");
+        System.out.println(" __/_  `.  .-\"\"\"-.");
+        System.out.println(" \\_,` | \\-'  /   )`-')");
+        System.out.println("  \"\") `\"`    \\  ((`\"`");
+        System.out.println(" ___Y  ,    .'7 /|");
+        System.out.println(" (_,___/...-` (_/_/");
+    }
+
+    // Method to print new Bulldog Dog art
+    public static void printBulldogDog() {
+        System.out.println("  (\\,--------'()'--o");
+        System.out.println("   (_    ___    /~\"");
+        System.out.println("    (_)_)  (_)_)");
+    }
+
+    // Method to print the new Poodle Dog art you provided
+    public static void printPoodleDog() {
+        System.out.println("  __      _");
+        System.out.println(" o'')}____//");
+        System.out.println("  `_/      )");
+        System.out.println("  (_(_/-(_/");
+    }
+
+    // Method to print new Beagle Dog art
+    public static void printBeagleDog() {
+        System.out.println("   __");
+        System.out.println(" o-''|\\_____/)");
+        System.out.println(" \\_/|_)     )");
+        System.out.println("    \\  __  /");
+        System.out.println("    (_/ (_/    ");
+    }
+
+    // Method to print new German Shepherd Dog art
+    public static void printGermanShepherdDog() {
+        System.out.println("     |\\_/|                  ");
+        System.out.println("     | @ @   Woof! ");
+        System.out.println("     |   <>              _  ");
+        System.out.println("     |  _/\\------____ ((| |))");
+        System.out.println("     |               `--' |   ");
+        System.out.println(" ____|_       ___|   |__.' ");
+        System.out.println("/_/_____/____/_______|");
+    }
+
+    // Method to print the custom dog art you provided
+    public static void printCustomDogArt() {
+        System.out.println("");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("");
+        System.out.println("            /~~~~~~~~\\                           _");
+        System.out.println("    ##\\__/ @)      ~~~~~~~~\\                     \\ \\ ) )");
+        System.out.println("    |              /~~\\~~~~~                ((    |  \\");
+        System.out.println("     \\    /           |                          /   |");
+        System.out.println("      (~~~   /         \\____________/~~~~~~~~~~~~   /");
+        System.out.println("       ~~~~|~                                     /");
+        System.out.println("           :                                      |");
+        System.out.println("            \\                                     |");
+        System.out.println("            |                               /      \\");
+        System.out.println("             \\  \\_         :         \\     /~~~\\    |");
+        System.out.println("             /   :~~~~~|   :~~~~~~~~~~|   :     :   :");
+        System.out.println("            /    :    /    :         /    :    /    :");
+        System.out.println("        (~~~     )(~~~     )     (~~~     )(~~~     )");
+        System.out.println("         ~~~~~~~~  ~~~~~~~~       ~~~~~~~~  ~~~~~~~~");
+    }
+
+    // Method to pick a random dog art and print it
+    public static void printRandomDogArt() {
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(6); // Random number between 0 and 5
+
+        switch (randomIndex) {
+            case 0:
+                printLabradorDog(); // This will print the new Labrador art
+                break;
+            case 1:
+                printBulldogDog(); // This will print the Bulldog art
+                break;
+            case 2:
+                printPoodleDog(); // This will print the Poodle art
+                break;
+            case 3:
+                printBeagleDog(); // This will print the Beagle art
+                break;
+            case 4:
+                printGermanShepherdDog(); // This will print the new German Shepherd art
+                break;
+            case 5:
+                printCustomDogArt(); // This will print your provided custom dog art
+                break;
+        }
+    }
+
+}
