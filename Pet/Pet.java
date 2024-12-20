@@ -1,4 +1,3 @@
-import java.util.Scanner; // For input
 /**
  * Pet class creates a pet with attributes like name, type, age, hunger, and happiness.
  */
@@ -26,6 +25,10 @@ public class Pet {
     }
 
     public void feed(int foodAmount) {
+
+        // Test this it might not work
+        hungerLevel = compareTimeLastFed(getTimeLastFed());
+
         System.out.println(name + " is being fed!");
         for (int i = 0; i < foodAmount; i++) {
             // Each feeding decreases hunger level
@@ -78,11 +81,22 @@ public class Pet {
         this.happiness = happiness;
     }
 
-    public void displayInfo() {
-        System.out.println("Pet name: " + name);
-        System.out.println("Pet type: " + petType);
-        System.out.println("Pet age: " + age);
-        System.out.println("Pet hunger level: " + hungerLevel);
-        System.out.println("Pet happiness: " + happiness);
+    public long getTimeLastFed(){
+        long lastFed = System.currentTimeMillis();
+        return lastFed;
     }
+
+    public int compareTimeLastFed(long lastFed){
+        long diff = System.currentTimeMillis() - lastFed;
+        if (diff <= 30000) {
+            return 10;
+        }
+        else if (diff >= 60000) {
+            return 0;
+        }
+        else{
+            return 5;
+        }
+    }
+
 }
