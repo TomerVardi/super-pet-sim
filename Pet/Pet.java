@@ -1,109 +1,158 @@
+/**
+ * Represents a virtual pet in the Pet Sim game. 
+ * Each pet has a name, type (dog or cat), age, hunger level, happiness level, and a record of when it was last fed.
+ */
 public class Pet {
-    // Name
+    // Pet's name
     private String name;
+
     // False == Dog, True == Cat
     private boolean petType;
-    // Age
+
+    // Pet's age
     private final int age;
+
     // Hunger level from 0 (not hungry) to 10 (very hungry)
     private int hungerLevel;
+
     // Happiness level from 0 (unhappy) to 10 (very happy)
     private int happiness;
-    // Time the pet was last fed (in milliseconds)
+
+    // Time the pet was last fed (in milliseconds since epoch)
     private long timeLastFed;
 
+    /**
+     * Constructs a new Pet object.
+     *
+     * @param name    The name of the pet.
+     * @param petType True if the pet is a cat, false if it's a dog.
+     * @param age     The age of the pet.
+     */
     public Pet(String name, boolean petType, int age) {
         this.name = name;
         this.petType = petType;
         this.age = age;
-        // Default hunger level (neutral state)
-        this.hungerLevel = 5;
-        // Default happiness level (neutral state)
-        this.happiness = 5;
-        // Time the pet was last fed is initialized to the current time
-        this.timeLastFed = System.currentTimeMillis();
+        this.hungerLevel = 5; // Default neutral hunger level
+        this.happiness = 5;  // Default neutral happiness level
+        this.timeLastFed = System.currentTimeMillis(); // Record the current time as last fed time
     }
 
-    // Method to feed the pet
+    /**
+     * Feeds the pet and updates its hunger and happiness levels.
+     *
+     * @param foodAmount The amount of food to feed the pet.
+     */
     public void feed(int foodAmount) {
-        // Update hunger based on the time passed since last feeding
+        // Update hunger level based on time passed since the last feeding
         hungerLevel = calculateHungerLevel();
 
         System.out.println(name + " is being fed!");
         for (int i = 0; i < foodAmount; i++) {
-            // Each feeding decreases hunger level
             if (hungerLevel > 0) {
-                hungerLevel--;
+                hungerLevel--; // Decrease hunger level
                 System.out.println(name + " is eating... Hunger level: " + hungerLevel);
             } else {
                 System.out.println(name + " is not hungry anymore.");
-                break;  // If hunger is satisfied, stop feeding
+                break; // Stop feeding if hunger level is satisfied
             }
         }
-        // Increase happiness after feeding
-        happiness = Math.min(10, happiness + 1);  // Max happiness is 10
+
+        // Increase happiness after feeding (maximum level is 10)
+        happiness = Math.min(10, happiness + 1);
         System.out.println(name + "'s happiness after feeding: " + happiness);
 
         // Update the time of the last feeding
         timeLastFed = System.currentTimeMillis();
     }
 
-    // Method to calculate hunger based on time passed since last feeding
+    /**
+     * Calculates the pet's hunger level based on the time elapsed since it was last fed.
+     *
+     * @return The updated hunger level (0 to 10).
+     */
     public int calculateHungerLevel() {
-        long diff = System.currentTimeMillis() - timeLastFed;
-
-        // Hunger increases over time (time is in milliseconds)
-        int hungerIncrease = (int) (diff / 60000);  // Increase hunger every minute
-        int newHungerLevel = Math.min(10, hungerLevel + hungerIncrease); // Ensure hunger doesn't go above 10
-        return newHungerLevel;
+        long diff = System.currentTimeMillis() - timeLastFed; // Time difference in milliseconds
+        int hungerIncrease = (int) (diff / 60000); // Hunger increases every minute
+        return Math.min(10, hungerLevel + hungerIncrease); // Hunger level cannot exceed 10
     }
 
-    // Returns the pet's name
+    /**
+     * Returns the name of the pet.
+     *
+     * @return The pet's name.
+     */
     public String getName() {
         return name;
     }
 
-    // Sets the pet's name
+    /**
+     * Sets the name of the pet.
+     *
+     * @param name The new name for the pet.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
-    // Returns the type of pet
+    /**
+     * Returns whether the pet is a cat or a dog.
+     *
+     * @return True if the pet is a cat, false if it's a dog.
+     */
     public boolean isPetType() {
         return petType;
     }
 
-    // Sets the type of pet
+    /**
+     * Sets the type of the pet.
+     *
+     * @param petType True if the pet is a cat, false if it's a dog.
+     */
     public void setPetType(boolean petType) {
         this.petType = petType;
     }
 
-    // Returns the pet's age
+    /**
+     * Returns the age of the pet.
+     *
+     * @return The pet's age.
+     */
     public int getAge() {
         return age;
     }
 
-    // Returns the pet's hunger level
+    /**
+     * Returns the pet's current hunger level.
+     *
+     * @return The hunger level (0 to 10).
+     */
     public int getHungerLevel() {
         return hungerLevel;
     }
 
-    // Sets the pet's hunger level
-    public void setHungerLevel(int hungerLevel) {
-        this.hungerLevel = hungerLevel;
-    }
-
-    // Returns the pet's happiness level
+    /**
+     * Returns the pet's current happiness level.
+     *
+     * @return The happiness level (0 to 10).
+     */
     public int getHappiness() {
         return happiness;
     }
 
-    // Sets the pet's happiness level
+    /**
+     * Sets the pet's happiness level.
+     *
+     * @param happiness The new happiness level (0 to 10).
+     */
     public void setHappiness(int happiness) {
         this.happiness = happiness;
     }
 
-    // Returns the time the pet was last fed (in milliseconds)
+    /**
+     * Returns the time the pet was last fed.
+     *
+     * @return The time (in milliseconds since epoch) when the pet was last fed.
+     */
     public long getTimeLastFed() {
         return timeLastFed;
     }
