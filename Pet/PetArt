@@ -1,9 +1,10 @@
 import java.util.Random;
 
-public class PetArt {
+public class DogArt {
 
     // Method to print new Labrador Dog art
     public static void printLabradorDog() {
+        System.out.println("Here's your Labrador art!");
         System.out.println("    ___");
         System.out.println(" __/_  `.  .-\"\"\"-.");
         System.out.println(" \\_,` | \\-'  /   )`-')");
@@ -14,6 +15,7 @@ public class PetArt {
 
     // Method to print new Bulldog Dog art
     public static void printBulldogDog() {
+        System.out.println("Here's your Bulldog art!");
         System.out.println("  (\\,--------'()'--o");
         System.out.println("   (_    ___    /~\"");
         System.out.println("    (_)_)  (_)_)");
@@ -21,6 +23,7 @@ public class PetArt {
 
     // Method to print the new Poodle Dog art you provided
     public static void printPoodleDog() {
+        System.out.println("Here's your Poodle art!");
         System.out.println("  __      _");
         System.out.println(" o'')}____//");
         System.out.println("  `_/      )");
@@ -29,6 +32,7 @@ public class PetArt {
 
     // Method to print new Beagle Dog art
     public static void printBeagleDog() {
+        System.out.println("Here's your Beagle art!");
         System.out.println("   __");
         System.out.println(" o-''|\\_____/) ");
         System.out.println(" \\_/|_)     ) ");
@@ -38,6 +42,7 @@ public class PetArt {
 
     // Method to print new German Shepherd Dog art
     public static void printGermanShepherdDog() {
+        System.out.println("Here's your German Shepherd art!");
         System.out.println("     |\\_/|                  ");
         System.out.println("     | @ @   Woof! ");
         System.out.println("     |   <>              _  ");
@@ -49,6 +54,7 @@ public class PetArt {
 
     // Method to print the custom dog art you provided
     public static void printCustomDogArt() {
+        System.out.println("Here's your Custom Dog art!");
         System.out.println("");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("");
@@ -70,22 +76,46 @@ public class PetArt {
 
     // Method to print the Mountain Lion Cat art (CatOne)
     public static void printCatOne() {
+        System.out.println("Here's your Mountain Lion Cat art!");
         System.out.println("(`-''-/`).___..--''`-._ ");
         System.out.println(" `6_ 6  )   `-.  (     ).`-.__.`) ");
         System.out.println(" (_Y_.)'  ._   )  `._ `. ``-..-' ");
-        System.out.println("   _..`--'_..-_/  /--'_.'");
+        System.out.println("   _..`--'_..-_/  /--'._");
         System.out.println("  ((((.-''  ((((.'  (((.-' ");
     }
+
     // Method to print the Simple Cat art (CatTwo)
     public static void printCatTwo() {
+        System.out.println("Here's your Simple Cat!");
         System.out.println("  /\\_/\\");
         System.out.println(" ( o.o )");
         System.out.println("  > ^ <");
     }
+
+    // Method to print the new Cat art (CatThree)
+    public static void printCatThree() {
+        System.out.println("Here's your new Energetic Cat!");
+        System.out.println(" _._     _,-'\"\"`-._");
+        System.out.println("(,-.`._,'(       |\\`-/|");
+        System.out.println("    `-.-' \\ )-`( , o o)");
+        System.out.println("          `-    \\`_`\"'-");
+    }
+
+    // Method to print the new Cat art (CatFour)
+    public static void printCatFour() {
+        System.out.println("Here's your new Lazy Cat!");
+        System.out.println("   |\\---/|");
+        System.out.println("   | ,_, |");
+        System.out.println("    \\_`_/-..----.");
+        System.out.println(" ___/ `   ' ,\"\"+ \\");
+        System.out.println("(__...'   __\\    |`.___.';");
+        System.out.println("  (_,...'(_,.`__)/'.....+");
+    }
+
     // Method to pick a random dog or cat art and print it
     public static void printRandomDogOrCatArt() {
         Random rand = new Random();
-        int randomIndex = rand.nextInt(7); // Random number between 0 and 6
+        int randomIndex = rand.nextInt(10); // Random number between 0 and 9
 
         switch (randomIndex) {
             case 0:
@@ -109,8 +139,16 @@ public class PetArt {
             case 6:
                 printCatOne(); // Print Mountain Lion Cat art
                 break;
+            case 7:
+                printCatTwo(); // Print Simple Cat art
+                break;
+            case 8:
+                printCatThree(); // Print new Cat art
+                break;
+            case 9:
+                printCatFour(); // Print new Cat art (CatFour)
+                break;
         }
     }
+
 }
-
-
